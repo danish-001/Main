@@ -6,13 +6,14 @@
 
 body{
     font-family: "poppins", sans-serif;
-    background-color: black;
+    /* background-color: black; */
+    background-image: linear-gradient(120deg, #454545, #556655);
 }
 
 .container{
     width: 1000px;
     height: 550px;
-    background-image: url(/cycle.jpg);
+    background-image: url(/beach.jpg);
     margin: 20px auto;
 }
 
@@ -24,7 +25,7 @@ body{
     margin: 0 auto;
     top: 13px;
     position: relative;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 4px 8px 20px rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 .result{
@@ -104,4 +105,24 @@ button:nth-child(16) {
 button:nth-child(20) {
     font-size: 20px;
     background-color: #9477af;
+}
+
+.number:hover{
+    background-color: black;
+    color: white;
+}
+
+#delete:hover{
+    background-color: orange;
+    color: white;
+}
+
+#allclear:hover{
+    background-color: orangered;
+    color: white;
+}
+
+#point{
+    font-weight: bold;
+    font-size: 20px;
 }

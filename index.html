@@ -13,15 +13,15 @@
         <div class="calculator">
             <div class="result">
                 <div class="history">
-                    <p class="history-value">25*5</p>
+                    <p class="history-value" id="history-value"></p>
                 </div>
                 <div class="output">
-                    <p class="output-value">125</p>
+                    <p class="output-value" id="output-value"></p>
                 </div>
             </div>
             <div class="keyboard">
-                <button class="operator" id="clear">C</button>
-                <button class="operator" id="backspace">CE</button>
+                <button class="operator" id="delete">Del</button>
+                <button class="operator" id="allclear">AC</button>
                 <button class="operator" id="%">%</button>
                 <button class="operator" id="/">&#247;</button>
 
@@ -43,7 +43,7 @@
 
                 <button class="operator" id="+">+</button>
 
-                <button class="empty" id="empty"></button>
+                <button class="number" id="point">.</button>
                 <button class="number" id="0">0</button>
                 <button class="empty" id="empty"></button>
 
@@ -52,6 +52,6 @@
             </div>
         </div>
     </div>
-    <script src="./app.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>
