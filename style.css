@@ -46,6 +46,7 @@ body{
 }
 
 .output{
+    color: black;
     text-align: right;
     height: 60px;
     margin: 10px 20px;
@@ -82,6 +83,11 @@ body{
 }
 
 /* to give colors to the buttons, we use nth-child selector*/
+button:nth-child(3) {
+    font-size: 20px;
+    background-color: #b27820;
+}
+
 button:nth-child(4){
     font-size: 20px;
     background-color: #20b2aa;
@@ -89,7 +95,7 @@ button:nth-child(4){
 
 button:nth-child(8) {
     font-size: 20px;
-    background-color: #ffa500;
+    background-color: #9477af;
 }
 
 button:nth-child(12) {
@@ -104,7 +110,7 @@ button:nth-child(16) {
 
 button:nth-child(20) {
     font-size: 20px;
-    background-color: #9477af;
+    background-color: #ffa500;
 }
 
 .number:hover{
@@ -113,7 +119,7 @@ button:nth-child(20) {
 }
 
 #delete:hover{
-    background-color: orange;
+    background-color: gray;
     color: white;
 }
 
@@ -125,4 +131,8 @@ button:nth-child(20) {
 #point{
     font-weight: bold;
     font-size: 20px;
+}
+
+.operator:hover{
+    opacity: 0.75;
 }
