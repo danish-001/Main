@@ -1,3 +1,4 @@
+// 2.
 // To store all the information about operations and input/output
 class Calculator {
   constructor(previousOperandText, currentOperandText) {
@@ -6,12 +7,14 @@ class Calculator {
     this.clear()
   }
 
+  // To clear the screen
   clear() {
     this.previousOperand = '';
     this.currentOperand = '';
     this.operation = undefined;
   }
 
+  // To delete the digits one by one
   delete() {
     this.currentOperand = this.currentOperand.toString().slice(0, -1);
   }
@@ -35,9 +38,10 @@ class Calculator {
 
   // Take values and compute a single value
   compute() {
+
     let computation;
 
-    // Converting string to number
+    // Converting both strings to a number
     const prev = parseFloat(this.previousOperand);
     const current = parseFloat(this.currentOperand);
 
@@ -63,11 +67,13 @@ class Calculator {
 
     // To clear out the screen
     this.currentOperand = computation
-    this.previousOperand = ''
     this.operation = undefined
+    this.previousOperand = ''
   }
 
   getDisplayNumber(number) {
+
+    // Converting the number to a string
     const stringNumber = number.toString()
 
     // To split the number into an array where integer digits 
@@ -100,16 +106,17 @@ class Calculator {
   }
 }
 
+// 1.
 // Get all the data and asign it to a constant
-const numberButtons = document.querySelectorAll(".number");
-const operatorButtons = document.querySelectorAll(".operator");
+const numberButtons = document.querySelectorAll('.number');
+const operatorButtons = document.querySelectorAll('.operator');
 
-const equalsButton = document.getElementById("#=");
-const deleteButton = document.getElementById('#delete')
-const allClearButton = document.getElementById("#allclear");
+const equalsButton = document.getElementById('#equals');
+const deleteButton = document.getElementById('#delete');
+const allClearButton = document.getElementById('#allclear');
 
-const previousOperandText = document.getElementById("#history-value");
-const currentOperandText = document.getElementById("#output-value");
+const previousOperandText = document.getElementById('#history-value');
+const currentOperandText = document.getElementById('#output-value');
 
 // Creating an object for the class
 const calculator = new Calculator(previousOperandText, currentOperandText)
