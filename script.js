@@ -67,13 +67,36 @@ class Calculator {
     this.operation = undefined
   }
 
-  
+  getDisplayNumber(number) {
+    const stringNumber = number.toString()
 
+    // To split the number into an array where integer digits 
+    // and decimal digits will be separeted by a.
+    const integerDigits = parseFloat(stringNumber.split('.'), [0])
+    const decimalDigits = stringNumber.split('.')[1]
+
+    let integerDisplay
+    if (isNaN(integerDigits)) {
+      integerDigits = '';
+    } else { 
+      integerDisplay = integerDigits.toLocaleString('en', {maximumFractionDigits : 0})
+    }
+
+    if (decimalDigits != null) {
+      return `${integerDisplay}.${decimalDigits}`
+    } else {
+      return integerDisplay
+    }
+  }
 
   // To let us update the display
   updateDisplay() {
-    this.currentOperandText.innerText = this.currentOperand
-    this.previousOperandText.innerText = this.previousOperand
+    this.currentOperandText.innerText = this.getDisplayNumber(this.currentOperand)
+    if (this.operation != null) {
+      this.previousOperandText.innerText = `${this.thisgetDisplayNumber(this.previousOperand)} ${this.operation}`;
+    } else {
+      this.previousOperandText.innerText = ''
+    }
   }
 }
 
