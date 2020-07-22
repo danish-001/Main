@@ -30,6 +30,8 @@ body{
 
 .result{
     height: 120px;
+    display: flex;
+    flex-direction: column;
 }
 
 .keyboard{
